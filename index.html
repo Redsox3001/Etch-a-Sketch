@@ -8,7 +8,24 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="container"></div>
+    <div class="container">
+        <div class="title"><h1>Etch-a-Sketch</h1></div>
+        <div class="mode">Mode: Coloring</div>
+        <div class="content">
+            <div class="board"></div>
+            <div class="buttons">
+                <button class="blackButton" onclick="changeColor('black')">Black</button>
+                <button class="rainbowButton" onclick="changeColor('random')">Rainbow</button>
+                <button class="erasorButton" onclick="changeColor('white')">Erasor</button>
+                <button onclick="resetBoard()">Reset</button>
+            </div>
+            <div>
+                <input type="text" placeholder="Size of Board" value="16" onchange= "changeSize(this.value)"/>
+                <button>Set Size</button>
+            </div>
+            <div class="error">Input must be between 2 and 100</div>
+        </div>
+    </div>
 </body>
 <script src = "main.js"></script>
 </html>

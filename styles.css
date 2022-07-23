@@ -1,17 +1,88 @@
-:root {
-    --grid-cols: 1;
-    --grid-rows: 1;
-  }
-  
-  #container {
-    display: grid;
-    grid-gap: 1em;
-    grid-template-rows: repeat(var(--grid-rows), 1fr);
-    grid-template-columns: repeat(var(--grid-cols), 1fr);
-  }
-  
-  .grid-item {
-    padding: 1em;
-    border: 1px solid #ddd;
+.container{
+    height: 100vh;
+    width:100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(rgb(237, 123, 212), white);
+}
+
+.board {
+    width: 80%;
+    height: 80%;
+    display:grid;
+    background-color: blanchedalmond;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    .3em 0.3em 1em rgba(0, 0, 0, 0.3);
+
+}
+
+.content {
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    min-width:300px;
+    min-height:300px;
+    width:500vw;
+    height:500vh;
+    max-width: 2000px;
+    max-height: 2000px;
+}
+
+.board:hover {
+    cursor: pointer;
+}
+
+.title {
+    display:flex;
+    justify-content: center;
+    font-size:xx-large;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.buttons {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 0.3em 1.2em;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 2em;
+    text-decoration: none;
+    font-weight: 600;
     text-align: center;
-  }
+    transition: all 0.2s;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.blackButton {
+    background-color:black;
+    color:white;
+}
+
+.rainbowButton { 
+    background: linear-gradient(0.25turn,#ffdde4,#ffe944,#fbfaf0,#ffe5d9,#d8e2dc)
+}
+
+.erasorButton {
+    background-color: whitesmoke;
+    color: black;
+}
+
+input {
+    width: 50px;
+}
+
+.mode {
+    margin-bottom: 5px;
+}
+
+.error {
+    display:none;
+}
+
+
